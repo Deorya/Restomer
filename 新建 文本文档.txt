@@ -1,0 +1,22 @@
+# Pytorch and Vision
+# 注意：torch的安装与您的CUDA版本高度相关。
+# 如果您有NVIDIA显卡，请访问 PyTorch官网 (https://pytorch.org/get-started/locally/)
+# 获取适合您CUDA版本的安装命令，并单独执行它，例如:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# 如果您只有CPU，下面的命令通常是有效的。
+torch
+torchvision
+
+# Image Processing
+opencv-contrib-python # 用于导入 cv2，进行图像的读取、写入和颜色空间转换
+scikit-image # 用于导入 skimage，提供 img_as_ubyte 等图像工具函数
+
+# Scientific Computing & Utilities
+numpy # 几乎所有科学计算和数据处理的基础库
+PyYAML # 用于解析 .yml 配置文件 (例如训练选项)
+tqdm # 用于在处理循环时显示美观的进度条
+natsort # 用于对文件名进行"自然排序" (例如 '2.png' 会排在 '10.png' 之前)
+einops # Restormer模型架构的核心依赖，用于进行高效的张量操作
+
+# Data Loading (basicsr常用依赖)
+lmdb # basicsr 数据加载器常用的数据库格式，用于高效读取数据
