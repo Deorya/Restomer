@@ -93,7 +93,7 @@ class DynamicFeedForward(nn.Module):
         )
 
         # 2. 定义多个卷积核作为 "专家"
-        kernel_sizes = [3, 5, 7]  # 示例：使用 3x3, 5x5, 7x7 卷积核
+        kernel_sizes = [1, 3, 5]  # 示例：使用 3x3, 5x5, 7x7 卷积核
         self.experts = nn.ModuleList()
         for k_size in kernel_sizes:
             padding = (k_size - 1) // 2
